@@ -3,45 +3,22 @@
 //
 
 #include <iostream>
-#include "SFML/Graphics.hpp"
+#include "Vaisseau.h"
 
 int main() {
-    sf::RenderWindow window(sf::VideoMode(800, 800), "Cercles");
-    window.setVerticalSyncEnabled(true);
+    Vaisseau gentille(100,20);
+    Vaisseau mechant(40,10);
 
-    float y = 0;
-    float radius = 20;
+    gentille.attaquer(mechant);
+    mechant.attaquer(gentille);
 
-    while(window.isOpen())
-
-    {
-        sf::Event event{};
-        while(window.pollEvent(event))
-        {
-            if(event.type == sf::Event::Closed)
-            {
-                window.close();
-            }
-        }
-        window.clear(sf::Color(200,50,8));
-        sf::CircleShape cercle(radius,3);
-        sf::RectangleShape recyangle(sf::Vector2f(150, 75));
-        recyangle.setPosition(400,y);
-        cercle.setPosition(200,y);
-
-        window.draw(cercle);
-        window.draw(recyangle);
-        window.display();
-        y++;
-        if (y == 200)
-        {
-            y = y-y;
-        }
-
+    std::cout << "gentille" << std::endl;
+    gentille.afficherEtat();
+    std::cout << std::endl << "mechant" << std::endl;
+    mechant.afficherEtat();
+    if (gentille.afficherEtat() == 100) {
+        std::cout << "20 is greater than 18";
     }
-
-
-    std::cout << "J'ai quitté la fenêtre proprement !" << std::endl;
 
     return 0;
 }
