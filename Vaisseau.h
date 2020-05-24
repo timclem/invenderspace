@@ -16,9 +16,16 @@ public:
     int afficherEtat() const;
 
 
+
+
+
+
+
 private:
+
     int m_vie;
     int m_degatarm;
+
 
 };
 

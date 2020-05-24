@@ -4,6 +4,7 @@
 
 #include "Vaisseau.h"
 #include <iostream>
+#include "SFML/Graphics.hpp"
 
 Vaisseau::Vaisseau():m_vie(100),m_degatarm(20)
 {}
@@ -32,4 +33,11 @@ int Vaisseau::afficherEtat() const {
 
     }
 }
+
+
+
+
+
+
+
 
