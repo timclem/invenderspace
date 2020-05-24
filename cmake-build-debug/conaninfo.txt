@@ -1,0 +1,54 @@
+[settings]
+    arch=x86_64
+    build_type=Release
+    compiler=Visual Studio
+    compiler.runtime=MD
+    compiler.version=16
+    os=Windows
+
+[requires]
+    sfml/2.Y.Z
+
+[options]
+
+
+[full_settings]
+    arch=x86_64
+    arch_build=x86_64
+    build_type=Release
+    compiler=Visual Studio
+    compiler.runtime=MD
+    compiler.version=16
+    os=Windows
+    os_build=Windows
+
+[full_requires]
+    bzip2/1.0.8:d16a91eadaaf5829b928b12d2f836ff7680d3df5
+    freetype/2.10.1:2eda287fd36b7b010dea069857045000246077e3
+    libpng/1.6.37:d140711d95cc16a85766a8fc3a551dfafe84cf63
+    sfml/2.5.1@bincrafters/stable:1a65d00cce60848cd990a2487100d0511d61207b
+    stb/20180214@conan/stable:5ab84d6acfe1f23c4fae0ab88f26e3a396351ac9
+    zlib/1.2.11:3fb49604f9c2f729b85ba3115852006824e72cab
+
+[full_options]
+    bzip2:build_executable=True
+    bzip2:shared=False
+    freetype:shared=False
+    freetype:with_bzip2=True
+    freetype:with_png=True
+    freetype:with_zlib=True
+    libpng:api_prefix=None
+    libpng:shared=False
+    sfml:audio=False
+    sfml:graphics=True
+    sfml:network=False
+    sfml:shared=False
+    sfml:window=True
+    zlib:minizip=False
+    zlib:shared=False
+
+[recipe_hash]
+
+
+[env]
+

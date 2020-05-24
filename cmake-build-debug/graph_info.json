@@ -1,0 +1,70 @@
+{
+ "options": [
+  [
+   "bzip2:build_executable",
+   "True"
+  ],
+  [
+   "bzip2:shared",
+   "False"
+  ],
+  [
+   "freetype:shared",
+   "False"
+  ],
+  [
+   "freetype:with_bzip2",
+   "True"
+  ],
+  [
+   "freetype:with_png",
+   "True"
+  ],
+  [
+   "freetype:with_zlib",
+   "True"
+  ],
+  [
+   "libpng:api_prefix",
+   "None"
+  ],
+  [
+   "libpng:shared",
+   "False"
+  ],
+  [
+   "sfml:audio",
+   "False"
+  ],
+  [
+   "sfml:graphics",
+   "True"
+  ],
+  [
+   "sfml:network",
+   "False"
+  ],
+  [
+   "sfml:shared",
+   "False"
+  ],
+  [
+   "sfml:window",
+   "True"
+  ],
+  [
+   "zlib:minizip",
+   "False"
+  ],
+  [
+   "zlib:shared",
+   "False"
+  ]
+ ],
+ "root": {
+  "name": null,
+  "version": null,
+  "user": null,
+  "channel": null
+ }
+}

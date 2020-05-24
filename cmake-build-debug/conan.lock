@@ -1,0 +1,52 @@
+{
+ "profile_host": "[settings]\narch=x86_64\narch_build=x86_64\nbuild_type=Release\ncompiler=Visual Studio\ncompiler.runtime=MD\ncompiler.version=16\nos=Windows\nos_build=Windows\n[options]\n[build_requires]\n[env]\n",
+ "graph_lock": {
+  "nodes": {
+   "0": {
+    "pref": null,
+    "options": "bzip2:build_executable=True\nbzip2:shared=False\nfreetype:shared=False\nfreetype:with_bzip2=True\nfreetype:with_png=True\nfreetype:with_zlib=True\nlibpng:api_prefix=None\nlibpng:shared=False\nsfml:audio=False\nsfml:graphics=True\nsfml:network=False\nsfml:shared=False\nsfml:window=True\nzlib:minizip=False\nzlib:shared=False",
+    "requires": [
+     "1"
+    ],
+    "path": "C:/Users/clement.theotime/projet2/jeux/invenderspace\\conanfile.txt"
+   },
+   "1": {
+    "pref": "sfml/2.5.1@bincrafters/stable#0:1a65d00cce60848cd990a2487100d0511d61207b#0",
+    "options": "audio=False\ngraphics=True\nnetwork=False\nshared=False\nwindow=True\nbzip2:build_executable=True\nbzip2:shared=False\nfreetype:shared=False\nfreetype:with_bzip2=True\nfreetype:with_png=True\nfreetype:with_zlib=True\nlibpng:api_prefix=None\nlibpng:shared=False\nzlib:minizip=False\nzlib:shared=False",
+    "requires": [
+     "2",
+     "6"
+    ]
+   },
+   "2": {
+    "pref": "freetype/2.10.1#0:2eda287fd36b7b010dea069857045000246077e3#0",
+    "options": "shared=False\nwith_bzip2=True\nwith_png=True\nwith_zlib=True\nbzip2:build_executable=True\nbzip2:shared=False\nlibpng:api_prefix=None\nlibpng:shared=False\nzlib:minizip=False\nzlib:shared=False",
+    "requires": [
+     "3",
+     "4",
+     "5"
+    ]
+   },
+   "3": {
+    "pref": "libpng/1.6.37#0:d140711d95cc16a85766a8fc3a551dfafe84cf63#0",
+    "options": "api_prefix=None\nshared=False\nzlib:minizip=False\nzlib:shared=False",
+    "requires": [
+     "4"
+    ]
+   },
+   "4": {
+    "pref": "zlib/1.2.11#0:3fb49604f9c2f729b85ba3115852006824e72cab#0",
+    "options": "minizip=False\nshared=False"
+   },
+   "5": {
+    "pref": "bzip2/1.0.8#0:d16a91eadaaf5829b928b12d2f836ff7680d3df5#0",
+    "options": "build_executable=True\nshared=False"
+   },
+   "6": {
+    "pref": "stb/20180214@conan/stable#0:5ab84d6acfe1f23c4fae0ab88f26e3a396351ac9#0",
+    "options": ""
+   }
+  }
+ },
+ "version": "0.3"
+}

@@ -1,0 +1,11 @@
+conan install C:/Users/clement.theotime/projet2/jeux -if=C:\Users\clement.theotime\projet2\jeux\invenderspace\cmake-build-release -pr=default
+ERROR: Conanfile not found at C:/Users/clement.theotime/projet2/jeux\conanfile.py or C:/Users/clement.theotime/projet2/jeux\conanfile.txt
+C:\Users\clement.theotime\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\193.6015.37\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Release -G "CodeBlocks - NMake Makefiles" C:\Users\clement.theotime\projet2\jeux\invenderspace
+-- Conan: Adjusting output directories
+-- Conan: Using cmake global configuration
+-- Conan: Adjusting default RPATHs Conan policies
+-- Conan: Adjusting language standard
+-- Current conanbuildinfo.cmake directory: C:/Users/clement.theotime/projet2/jeux/invenderspace/cmake-build-release
+-- Configuring done
+-- Generating done
+-- Build files have been written to: C:/Users/clement.theotime/projet2/jeux/invenderspace/cmake-build-release

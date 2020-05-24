@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="invenderspace"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="msvc8"/>
+		<Option virtualFolders="CMake Files\;CMake Files\cmake-build-release\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="C:/Users/clement.theotime/projet2/jeux/invenderspace/cmake-build-release"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\clement.theotime\projet2\jeux\invenderspace\cmake-build-release\Makefile VERBOSE=1 all"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\clement.theotime\projet2\jeux\invenderspace\cmake-build-release\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\clement.theotime\projet2\jeux\invenderspace\cmake-build-release\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\clement.theotime\projet2\jeux\invenderspace\cmake-build-release\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="C:/Users/clement.theotime/projet2/jeux/invenderspace/cmake-build-release"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\clement.theotime\projet2\jeux\invenderspace\cmake-build-release\Makefile VERBOSE=1 edit_cache"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\clement.theotime\projet2\jeux\invenderspace\cmake-build-release\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\clement.theotime\projet2\jeux\invenderspace\cmake-build-release\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\clement.theotime\projet2\jeux\invenderspace\cmake-build-release\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="invenderspace">
+				<Option output="C:/Users/clement.theotime/projet2/jeux/invenderspace/cmake-build-release/bin/invenderspace.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/clement.theotime/projet2/jeux/invenderspace/cmake-build-release/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add directory="C:/Users/clement.theotime/.conan/data/sfml/2.5.1/bincrafters/stable/package/1a65d00cce60848cd990a2487100d0511d61207b/include"/>
+					<Add directory="C:/Users/clement.theotime/.conan/data/freetype/2.10.1/_/_/package/2eda287fd36b7b010dea069857045000246077e3/include"/>
+					<Add directory="C:/Users/clement.theotime/.conan/data/freetype/2.10.1/_/_/package/2eda287fd36b7b010dea069857045000246077e3/include/freetype2"/>
+					<Add directory="C:/Users/clement.theotime/.conan/data/stb/20180214/conan/stable/package/5ab84d6acfe1f23c4fae0ab88f26e3a396351ac9/include"/>
+					<Add directory="C:/Users/clement.theotime/.conan/data/libpng/1.6.37/_/_/package/d140711d95cc16a85766a8fc3a551dfafe84cf63/include"/>
+					<Add directory="C:/Users/clement.theotime/.conan/data/bzip2/1.0.8/_/_/package/d16a91eadaaf5829b928b12d2f836ff7680d3df5/include"/>
+					<Add directory="C:/Users/clement.theotime/.conan/data/zlib/1.2.11/_/_/package/3fb49604f9c2f729b85ba3115852006824e72cab/include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\VC\Tools\MSVC\14.25.28610\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\clement.theotime\projet2\jeux\invenderspace\cmake-build-release\Makefile VERBOSE=1 invenderspace"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\clement.theotime\projet2\jeux\invenderspace\cmake-build-release\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\clement.theotime\projet2\jeux\invenderspace\cmake-build-release\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\clement.theotime\projet2\jeux\invenderspace\cmake-build-release\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="invenderspace/fast">
+				<Option output="C:/Users/clement.theotime/projet2/jeux/invenderspace/cmake-build-release/bin/invenderspace.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/clement.theotime/projet2/jeux/invenderspace/cmake-build-release/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="msvc8"/>
+				<Compiler>
+					<Add directory="C:/Users/clement.theotime/.conan/data/sfml/2.5.1/bincrafters/stable/package/1a65d00cce60848cd990a2487100d0511d61207b/include"/>
+					<Add directory="C:/Users/clement.theotime/.conan/data/freetype/2.10.1/_/_/package/2eda287fd36b7b010dea069857045000246077e3/include"/>
+					<Add directory="C:/Users/clement.theotime/.conan/data/freetype/2.10.1/_/_/package/2eda287fd36b7b010dea069857045000246077e3/include/freetype2"/>
+					<Add directory="C:/Users/clement.theotime/.conan/data/stb/20180214/conan/stable/package/5ab84d6acfe1f23c4fae0ab88f26e3a396351ac9/include"/>
+					<Add directory="C:/Users/clement.theotime/.conan/data/libpng/1.6.37/_/_/package/d140711d95cc16a85766a8fc3a551dfafe84cf63/include"/>
+					<Add directory="C:/Users/clement.theotime/.conan/data/bzip2/1.0.8/_/_/package/d16a91eadaaf5829b928b12d2f836ff7680d3df5/include"/>
+					<Add directory="C:/Users/clement.theotime/.conan/data/zlib/1.2.11/_/_/package/3fb49604f9c2f729b85ba3115852006824e72cab/include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\VC\Tools\MSVC\14.25.28610\include"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt"/>
+					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\clement.theotime\projet2\jeux\invenderspace\cmake-build-release\Makefile VERBOSE=1 invenderspace/fast"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\clement.theotime\projet2\jeux\invenderspace\cmake-build-release\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\clement.theotime\projet2\jeux\invenderspace\cmake-build-release\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\clement.theotime\projet2\jeux\invenderspace\cmake-build-release\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/Users/clement.theotime/projet2/jeux/invenderspace/cmake-build-release"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="nmake /NOLOGO /f C:\Users\clement.theotime\projet2\jeux\invenderspace\cmake-build-release\Makefile VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\clement.theotime\projet2\jeux\invenderspace\cmake-build-release\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\clement.theotime\projet2\jeux\invenderspace\cmake-build-release\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\clement.theotime\projet2\jeux\invenderspace\cmake-build-release\Makefile VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="C:/Users/clement.theotime/projet2/jeux/invenderspace/Vaisseau.cpp">
+			<Option target="invenderspace"/>
+		</Unit>
+		<Unit filename="C:/Users/clement.theotime/projet2/jeux/invenderspace/Vaisseau.h">
+			<Option target="invenderspace"/>
+		</Unit>
+		<Unit filename="C:/Users/clement.theotime/projet2/jeux/invenderspace/space.cpp">
+			<Option target="invenderspace"/>
+		</Unit>
+		<Unit filename="C:/Users/clement.theotime/projet2/jeux/invenderspace/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="C:/Users/clement.theotime/projet2/jeux/invenderspace/cmake-build-release/conanbuildinfo.cmake">
+			<Option virtualFolder="CMake Files\cmake-build-release\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
