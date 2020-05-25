@@ -23,6 +23,7 @@ int main() {
     float g_yposition = 700;
     float g_ymissile = 700;
     float g_xmissile = 350;
+    int tir = 0;
     int xmechant = 20;
     int ymechant = 20;
 
@@ -34,12 +35,36 @@ int main() {
             if(event.type == sf::Event::Closed){
                 window.close();
             }
+            if(event.type == sf::Event::KeyPressed) {
+                if (event.key.code == sf::Keyboard::O) {
+                    if (g_ymissile > 0){
+                        tir = 1;
+                        g_ymissile = g_ymissile - 700;
+                    }
+
+                }
+            }
+
+            if(event.type == sf::Event::KeyReleased){
+                    if(event.key.code == sf::Keyboard::O){
+                        tir = 0;
+                        g_ymissile = g_yposition;
+                        g_xmissile = g_xposition;
+                    }
+
+            }
+
         }
 
         //les caractéristique du  vaisseau gentille
         sf::RectangleShape vaisseau(sf::Vector2f(50, 50));
         vaisseau.setFillColor(sf::Color::Green);
         vaisseau.setPosition(g_xposition,g_yposition);
+
+        //les caractéristique du missile vaisseau gentille
+        sf::CircleShape g_missil(10);
+        g_missil.setFillColor(sf::Color::Red);
+        g_missil.setPosition(g_xmissile,g_ymissile);
 
         //les caractéristique du vaisseau méchant
         sf::RectangleShape vmechant(sf::Vector2f(50, 50));
@@ -50,47 +75,49 @@ int main() {
         }
 
 
-        //les caractéristique du missile vaisseau gentille
-        sf::CircleShape g_missil(50);
-        g_missil.setFillColor(sf::Color::Red);
-        g_missil.setPosition(g_xmissile,g_ymissile);
-
-
-
-
-
-
-
-
         //systéme pour faire bouger le vaisseau gentille
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Q))
-            if(g_xposition > -10) {
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Q)) {
+            if (g_xposition > -10) {
                 g_xposition = g_xposition - 5;
-            }
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))
-            if(g_xposition < 760) {
-                g_xposition = g_xposition + 5;
-            }
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Z))
-            if(g_yposition > 680) {
-                g_yposition = g_yposition - 5;
-            }
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::S))
-            if(g_yposition < 775) {
-                g_yposition = g_yposition + 5;
-            }
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)) {
-            g_missil.setPosition(vaisseau.getPosition());
-
-            for (float i = g_ymissile; i >= 100; i=i-1){
-                std::cout<< g_ymissile << std::endl;
+                if (tir == 0){
+                    g_xmissile = g_xmissile -5;
+                }
             }
 
         }
 
 
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))
+            if(g_xposition < 760) {
+                g_xposition = g_xposition + 5;
+                if (tir == 0){
+                    g_xmissile = g_xmissile +5;
+                }
+            }
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Z))
+            if(g_yposition > 680) {
+                g_yposition = g_yposition - 5;
+                if (tir == 0){
+                    g_ymissile = g_ymissile - 5;
+                }
+            }
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::S))
+            if(g_yposition < 775) {
+                g_yposition = g_yposition + 5;
+                if (tir == 0){
+                    g_ymissile = g_ymissile + 5;
+                }
+            }
+
+
+
+
+        std::cout << std::endl << tir << std::endl;
+
+
 
         window.draw(vmechant);
+        window.draw(g_missil);
         window.draw(vaisseau);
         window.display();
         window.clear(color);
