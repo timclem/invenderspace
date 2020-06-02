@@ -27,6 +27,7 @@ int main() {
     float m_yposition = 20;
     int tir = 0;
     int couleurm = 0;
+    int vitesse = 5;
 
 
 
@@ -160,10 +161,15 @@ int main() {
             }
 
         // faire bouger le méchant
-        m_xposition = m_xposition-m_xposition;
-            if((m_xposition == 700)||(m_xposition == 10)){
-                m_yposition = m_yposition-m_yposition
+        m_xposition = m_xposition+vitesse;
+            if(m_xposition == 760){
+                m_yposition = m_yposition+20;
+                vitesse = -5;
             }
+        if(m_xposition == 0){
+            m_yposition = m_yposition+20;
+            vitesse = 5;
+        }
 
 
 
