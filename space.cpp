@@ -23,38 +23,91 @@ int main() {
     float g_yposition = 700;
     float g_ymissile = 700;
     float g_xmissile = 350;
+    float m_xposition = 20;
+    float m_yposition = 20;
     int tir = 0;
-    int xmechant = 20;
-    int ymechant = 20;
+    int couleurm = 0;
 
 
 
 
-    while(window.isOpen()){
-        while(window.pollEvent(event)){
-            if(event.type == sf::Event::Closed){
+
+    while(window.isOpen()) {
+        while (window.pollEvent(event)) {
+            if (event.type == sf::Event::Closed) {
                 window.close();
             }
-            if(event.type == sf::Event::KeyPressed) {
-                if (event.key.code == sf::Keyboard::O) {
-                    if (g_ymissile > 0){
+
+            if (event.type == sf::Event::KeyPressed) {
+                //gérerla direction du vaisseau gentille
+                if (event.key.code == sf::Keyboard::Up){
+                    if(g_yposition > 680) {
+                        g_yposition = g_yposition - 10;
+                        if (tir == 0){
+                            g_ymissile = g_ymissile - 10;
+                        }
+                    }
+                }
+                if (event.key.code == sf::Keyboard::Down){
+                    if(g_yposition < 775) {
+                        g_yposition = g_yposition + 10;
+                        if (tir == 0){
+                            g_ymissile = g_ymissile + 10;
+                        }
+                    }
+                }
+                if (event.key.code == sf::Keyboard::Left){
+                    if (g_xposition > -10) {
+                        g_xposition = g_xposition - 10;
+                        if (tir == 0){
+                            g_xmissile = g_xmissile -10;
+                        }
+                    }
+                }
+                if (event.key.code == sf::Keyboard::Right){
+                    if(g_xposition < 760) {
+                        g_xposition = g_xposition + 10;
+                        if (tir == 0){
+                            g_xmissile = g_xmissile +10;
+                        }
+                    }
+                }
+                //gérer le tir du missile
+                if (event.key.code == sf::Keyboard::Space) {
+                    if (g_ymissile > 0) {
                         tir = 1;
                         g_ymissile = g_ymissile - 700;
+                    }
+                    //enlever de la vie au vaisseau méchant
+                    if((g_xmissile >= m_xposition)&&(g_xmissile <= m_xposition+40)){
+                        std::cout << std::endl << g_ymissile << m_yposition << m_xposition<<std::endl;
+                            gentille.attaquer(mechant);
+                            if(mechant.afficherEtat() == 0) {
+                                std::cout << std::endl << "mort" << std::endl;
+                                // ce qui va changer la couleur du méchant pour dire quil est élimminer
+                                couleurm = 1;
+
+                            }
+
+
+
+
                     }
 
                 }
             }
 
-            if(event.type == sf::Event::KeyReleased){
-                    if(event.key.code == sf::Keyboard::O){
-                        tir = 0;
-                        g_ymissile = g_yposition;
-                        g_xmissile = g_xposition;
-                    }
+            if (event.type == sf::Event::KeyReleased) {
+                if (event.key.code == sf::Keyboard::Space) {
+                    tir = 0;
+                    g_ymissile = g_yposition;
+                    g_xmissile = g_xposition;
+                }
 
             }
 
         }
+
 
         //les caractéristique du  vaisseau gentille
         sf::RectangleShape vaisseau(sf::Vector2f(50, 50));
@@ -69,24 +122,21 @@ int main() {
         //les caractéristique du vaisseau méchant
         sf::RectangleShape vmechant(sf::Vector2f(50, 50));
         vmechant.setFillColor(sf::Color::Yellow);
-        for (int i = 0; i < 8; i++) {
-
-            vmechant.setPosition(xmechant * i,ymechant);
+        if(couleurm == 1){
+            vmechant.setFillColor(sf::Color::Black);
         }
+        vmechant.setPosition(m_xposition,m_yposition);
+
 
 
         //systéme pour faire bouger le vaisseau gentille
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Q)) {
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Q))
             if (g_xposition > -10) {
                 g_xposition = g_xposition - 5;
                 if (tir == 0){
                     g_xmissile = g_xmissile -5;
                 }
             }
-
-        }
-
-
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))
             if(g_xposition < 760) {
                 g_xposition = g_xposition + 5;
@@ -109,10 +159,12 @@ int main() {
                 }
             }
 
+        // faire bouger le méchant
+        m_xposition = m_xposition-m_xposition;
+            if((m_xposition == 700)||(m_xposition == 10)){
+                m_yposition = m_yposition-m_yposition
+            }
 
-
-
-        std::cout << std::endl << tir << std::endl;
 
 
 
@@ -132,7 +184,7 @@ int main() {
     gentille.afficherEtat();
     std::cout << std::endl << "mechant" << std::endl;
     mechant.afficherEtat();
-    if (gentille.afficherEtat() == 90) {
+    if (mechant.afficherEtat() == 20) {
         std::cout << "20 is greater than 18";
     }
 
