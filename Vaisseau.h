@@ -10,7 +10,7 @@ class Vaisseau {
 
 public:
     Vaisseau();
-    Vaisseau(int m_vie, int m_degatarm);
+    Vaisseau(int vie, int degatarm, bool gentille);
     void recevoirDegats(int nbDegats);
     void attaquer(Vaisseau &cible);
     int afficherEtat() const;
@@ -25,6 +25,7 @@ private:
 
     int m_vie;
     int m_degatarm;
+    bool m_gentille;
 
 
 };

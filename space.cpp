@@ -7,8 +7,8 @@
 #include "SFML/Graphics.hpp"
 
 int main() {
-    Vaisseau gentille(100,20);
-    Vaisseau mechant(40,10);
+    Vaisseau gentille(100,20, true);
+    Vaisseau mechant(40,10, false);
 
 
 

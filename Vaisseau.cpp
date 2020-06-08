@@ -8,7 +8,7 @@
 
 Vaisseau::Vaisseau():m_vie(100),m_degatarm(20)
 {}
-Vaisseau::Vaisseau(int Vie,int degatarm):m_vie(Vie),m_degatarm(degatarm)
+Vaisseau::Vaisseau(int vie,int degatarm, bool gentille):m_vie(vie),m_degatarm(degatarm),m_gentille(gentille)
 {}
 
 void Vaisseau::recevoirDegats(int nbDegats) {
